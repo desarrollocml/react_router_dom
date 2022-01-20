@@ -5,17 +5,18 @@ export default function CategoriesPage() {
   const location = useLocation();
   const history = useHistory();
   const query = new URLSearchParams(location.search);
-  const skip = query.get("skip") || 0; //por defecto 0
-  const limit = query.get("limit") || 15; //por defecto 15
+  const skip = parseInt(query.get("skip")) || 0; //por defecto 0
+  const limit = parseInt( query.get("limit")) || 15; //por defecto 15
   console.log(skip);
   console.log(limit);
 
   const handleNext = () => {
-    query.set("skip", 100);
-    query.set("limit", 200);
+    query.set("skip", skip + limit);
+    //query.set("limit", 200);
     history.push({
-        // pathname: "/contact",
-         search:"?sabor=chocolate&color=blanco" });
+      // pathname: "/contact",
+      search: query.toString(),
+    });
   };
 
   return (
