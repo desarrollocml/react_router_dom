@@ -13,6 +13,9 @@ export default function AppRouter() {
         <Route exact path="/">{/* con exact la selecciona */}
           <h1>Home</h1>
         </Route>
+        <Route path="*">{/* la que no se encuentre */}
+          <h1>404 Not found</h1>
+        </Route>
       </Switch>
     </Router>
   );
