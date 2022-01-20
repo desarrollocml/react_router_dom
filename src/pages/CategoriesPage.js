@@ -1,12 +1,16 @@
-import { useLocation } from "react-router-dom"
+import { useLocation } from "react-router-dom";
 
 export default function CategoriesPage() {
-    const location=useLocation();
-    console.log(location.search);
-    //?skip=10&limit=10
+  const location = useLocation();
+  const query = new URLSearchParams(location.search);
+  const skip = query.get("skip")
+  const limit = query.get("limit")
+  console.log(skip);
+  console.log(limit);
+  
   return (
     <div>
-        <h1>CategoriesPage:</h1>
+      <h1>CategoriesPage:</h1>
     </div>
-  )
+  );
 }
