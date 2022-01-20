@@ -20,6 +20,11 @@ export default function Navbar() {
             Contact
           </NavLink>
         </li>
+        <li>
+          <NavLink exact to="/categories" activeClassName="active">
+            Categories
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );
