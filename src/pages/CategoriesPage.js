@@ -13,7 +13,9 @@ export default function CategoriesPage() {
   const handleNext = () => {
     query.set("skip", 100);
     query.set("limit", 200);
-    history.push({ pathname: "/contact" });
+    history.push({
+        // pathname: "/contact",
+         search:"?sabor=chocolate&color=blanco" });
   };
 
   return (
