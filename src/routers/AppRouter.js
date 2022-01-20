@@ -10,6 +10,7 @@ import NotFoundPage from "../pages/NotFoundPage";
 import PaymentsPage from "../pages/PaymentsPage";
 import ProfilePage from "../pages/ProfilePage";
 import RegisterPage from "../pages/RegisterPage";
+import PrivateRoute from "./PrivateRoute";
 
 export default function AppRouter() {
   return (
@@ -22,10 +23,10 @@ export default function AppRouter() {
         <Route exact path="/profile/:username" component={ProfilePage} />
         <Route exact path="/categories" component={CategoriesPage} />
 
-        <Route exact path="/Login" component={LoginPage} />
+        <Route exact path="/login" component={LoginPage} />
         <Route exact path="/register" component={RegisterPage} />
 
-        <Route exact path="/dashboard" component={DashboardPage} />
+        <PrivateRoute exact path="/dashboard" component={DashboardPage} />
         <Route exact path="/payments" component={PaymentsPage} />
 
         <Route path="*" component={NotFoundPage} />
