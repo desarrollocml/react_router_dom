@@ -11,6 +11,8 @@ export default function CategoriesPage() {
   return (
     <div>
       <h1>CategoriesPage:</h1>
+      <h2>{skip}</h2>
+      <h2>{limit}</h2>
     </div>
   );
 }
