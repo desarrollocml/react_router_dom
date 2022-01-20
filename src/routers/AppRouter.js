@@ -8,20 +8,12 @@ import NotFoundPage from "../pages/NotFoundPage";
 export default function AppRouter() {
   return (
     <Router>
-        <Navbar></Navbar>
+      <Navbar></Navbar>
       <Switch>
-        <Route path="/about">
-          <AboutPage></AboutPage>
-        </Route>
-        <Route path="/contact">
-          <ContactPage></ContactPage>
-        </Route>
-        <Route exact path="/">
-          <HomePage></HomePage>
-        </Route>
-        <Route path="*">
-          <NotFoundPage></NotFoundPage>
-        </Route>
+        <Route exact path="/about" component={AboutPage} />
+        <Route exact path="/Contact" component={ContactPage} />
+        <Route exact path="/" component={HomePage} />
+        <Route path="*" component={NotFoundPage} />
       </Switch>
     </Router>
   );
