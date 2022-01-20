@@ -25,6 +25,26 @@ export default function Navbar() {
             Categories
           </NavLink>
         </li>
+        <li>
+          <NavLink exact to="/login" activeClassName="active">
+            Login
+          </NavLink>
+        </li>
+        <li>
+          <NavLink exact to="/register" activeClassName="active">
+            Register
+          </NavLink>
+        </li>
+        <li>
+          <NavLink exact to="/dashboard" activeClassName="active">
+            Dashboard
+          </NavLink>
+        </li>
+        <li>
+          <NavLink exact to="/payments" activeClassName="active">
+            Payments
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );
