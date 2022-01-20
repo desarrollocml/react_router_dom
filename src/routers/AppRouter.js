@@ -1,20 +1,24 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import AboutPage from "../pages/AboutPage";
+import ContactPage from "../pages/ContactPage";
+import HomePage from "../pages/HomePage";
+import NotFoundPage from "../pages/NotFoundPage";
 
 export default function AppRouter() {
   return (
     <Router>
       <Switch>
         <Route path="/about">
-          <h1>About</h1>
+          <AboutPage></AboutPage>
         </Route>
         <Route path="/contact">
-          <h1>Contact</h1>
+          <ContactPage></ContactPage>
         </Route>
-        <Route exact path="/">{/* con exact la selecciona */}
-          <h1>Home</h1>
+        <Route exact path="/">
+          <HomePage></HomePage>
         </Route>
-        <Route path="*">{/* la que no se encuentre */}
-          <h1>404 Not found</h1>
+        <Route path="*">
+          <NotFoundPage></NotFoundPage>
         </Route>
       </Switch>
     </Router>
