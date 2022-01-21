@@ -57,7 +57,7 @@ export default function Navbar() {
               </NavLink>
             </li>
             <li>
-              <button onClick={auth.logout}>Logout</button>
+              <button onClick={handlelogout}>Logout</button>
             </li>
           </>
         )}
