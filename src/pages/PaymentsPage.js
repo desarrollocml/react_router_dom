@@ -1,5 +1,14 @@
-import React from 'react';
+import useAuth from "../auth/useAuth";
 
 export default function PaymentsPage() {
-  return <div><h1>PaymentsPage</h1></div>;
+  const auth = useAuth();
+  const handleLogout = () => {
+    auth.logout();
+  };
+  return (
+    <div>
+      <h1>PaymentsPage</h1>
+      <button onClick={handleLogout}>Logout</button>
+    </div>
+  );
 }

@@ -1,8 +1,11 @@
 import { NavLink } from "react-router-dom";
-//import useAuth from "../auth/useAuth";
+import useAuth from "../auth/useAuth";
 
 export default function Navbar() {
-  //const auth = useAuth();
+  const auth = useAuth();
+  const handlelogout=()=>{
+    auth.logout();
+  }
   return (
     <nav>
       <ul>
@@ -46,10 +49,10 @@ export default function Navbar() {
             Payments
           </NavLink>
         </li>
-       {/*  <li>
-          <button onClick={auth.logout()}>Logout</button>
-        </li> // To locate the bad setState() */}
-        
+       <li>
+          <button onClick={handlelogout}>Logout</button>
+        </li>{/*  // To locate the bad setState()
+         */}
       </ul>
     </nav>
   );

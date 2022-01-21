@@ -8,16 +8,12 @@ export default function LoginPage() {
     auth.login();
     history.push("/dashboard");
   };
-  /*  const handleLogout = () => {
-    auth.logout();
-  }; */
+ 
   return (
     <div>
       <h1>LoginPage</h1>
       <button onClick={handleLogin}>Sigin</button>
-      {/*  <button onClick={handleLogout}> 
-        Logout
-      </button> */}
+      
     </div>
   );
 }
