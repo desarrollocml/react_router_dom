@@ -5,7 +5,7 @@ import ContactPage from "../pages/ContactPage";
 import DashboardPage from "../pages/DashboardPage";
 import HomePage from "../pages/HomePage";
 import LoginPage from "../pages/LoginPage";
-import Navbar from "../pages/Navbar";
+import Navbar from "../components/Navbar";
 import NotFoundPage from "../pages/NotFoundPage";
 import PaymentsPage from "../pages/PaymentsPage";
 import ProfilePage from "../pages/ProfilePage";

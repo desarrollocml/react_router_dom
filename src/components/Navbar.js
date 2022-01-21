@@ -1,7 +1,8 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
+//import useAuth from "../auth/useAuth";
 
 export default function Navbar() {
+  //const auth = useAuth();
   return (
     <nav>
       <ul>
@@ -45,6 +46,10 @@ export default function Navbar() {
             Payments
           </NavLink>
         </li>
+       {/*  <li>
+          <button onClick={auth.logout()}>Logout</button>
+        </li> // To locate the bad setState() */}
+        
       </ul>
     </nav>
   );
