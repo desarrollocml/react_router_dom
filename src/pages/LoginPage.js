@@ -10,7 +10,9 @@ export default function LoginPage() {
   console.log("-->",previusObjectURl)
   const handleLogin = () => {
     auth.login();
-    history.push(previusObjectURl);
+    history.push(previusObjectURl|| "/dashboard");
+    //si previusObjectURl es undefined redirige 
+    //a otra ruta, ej:/dashboard
   };
 
   return (

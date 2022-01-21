@@ -11,6 +11,7 @@ import PaymentsPage from "../pages/PaymentsPage";
 import ProfilePage from "../pages/ProfilePage";
 import RegisterPage from "../pages/RegisterPage";
 import PrivateRoute from "./PrivateRoute";
+import PublicRoute from "./PublicRoute";
 
 export default function AppRouter() {
   return (
@@ -23,8 +24,8 @@ export default function AppRouter() {
         <Route exact path="/profile/:username" component={ProfilePage} />
         <Route exact path="/categories" component={CategoriesPage} />
 
-        <Route exact path="/login" component={LoginPage} />
-        <Route exact path="/register" component={RegisterPage} />
+        <PublicRoute exact path="/login" component={LoginPage} />
+        <PublicRoute exact path="/register" component={RegisterPage} />
 
         <PrivateRoute exact path="/dashboard" component={DashboardPage} />
         <PrivateRoute exact path="/payments" component={PaymentsPage} />
